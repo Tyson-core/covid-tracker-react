@@ -10,7 +10,7 @@ export const MainScreen = () => {
     return (
         <DataProvider>
             <div className="header_container">
-                <img src={image} alt="covid_img"  className="mt-5 mb-3 logo_img"/>
+                <img src={image} alt="covid_img"  className="mt-3 mb-3 logo_img"/>
             </div>
             <GlobalData/>
             <MapScreen />

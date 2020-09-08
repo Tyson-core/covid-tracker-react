@@ -20,6 +20,7 @@ export const MapScreen = () => {
     } else {
       getDataByCountry(focused);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [clicked]);
 
   const layerProps = {
@@ -38,8 +39,8 @@ export const MapScreen = () => {
     if(hovered==="None"){
       return
     }
-    let x = e.clientX;
-    let y = e.clientY;
+    let x = e.pageX;
+    let y = e.pageY;
     textCountry.current.style.left=x+"px"
     textCountry.current.style.top=y+25+"px"
   }

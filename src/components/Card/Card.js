@@ -6,7 +6,7 @@ import { DataContext } from "../../context/DataProvider";
 export const Card = () => {
   const { dataCountry, notFound } = useContext(DataContext);
 
-  const lastUpdate = moment(dataCountry.lastUpdate).format("MM/DD/YYYY");
+  const lastUpdate = moment(dataCountry.lastUpdate).format("LL");
 
   const alertMsg ={
     display:'flex',
@@ -80,7 +80,7 @@ export const Card = () => {
       )}
       {notFound && (
         <div style={alertMsg}>
-          <div className="alert alert-danger alrt_custom" role="alert">
+          <div className="alert alert-danger alrt_custom mb-5 mt-3" role="alert">
             Ups! We did not find data for this country. &nbsp;
             <i className="far fa-frown"></i>
           </div>

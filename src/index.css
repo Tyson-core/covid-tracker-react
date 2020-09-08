@@ -95,7 +95,9 @@ code {
   font-size: 0.8rem;
 }
 
-
+.chart_container{
+  width: 80%;
+}
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -118,7 +120,11 @@ code {
     width: 50%;
   }
 }
-
+@media (max-width: 506px) {
+  .chart_container{
+    width: 96%;
+  }
+}
 
 @media (max-width: 330px) {
   .global_data small{

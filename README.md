@@ -1,6 +1,6 @@
 ##  THIS APPLICACTION IS NO FINISHED.
 
-[YOU CAN TEST THIS APP HERE](https://pokeapp-react-v1.netlify.app/)
+[YOU CAN TEST THIS APP HERE](https://covid-tracker-r.netlify.app/)
 
 ## Covid Tracker
 

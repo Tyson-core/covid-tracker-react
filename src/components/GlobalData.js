@@ -6,7 +6,7 @@ import { DataContext } from "../context/DataProvider";
 export const GlobalData = () => {
   const { dataGlobal } = useContext(DataContext);
   
-  const lastUpdate = moment(dataGlobal.lastUpdate).format("MM/DD/YYYY");
+  const lastUpdate = moment(dataGlobal.lastUpdate).format("LL");
   return (
     dataGlobal.length !== 0 && (
       <div className="global_data mt-3">
