@@ -1,13 +1,134 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo_img {
+  width: 300px;
+}
+
+.vector_map {
+  fill: rgb(75, 177, 224);
+}
+
+.vector_map path {
+  transition: 0.2s ease-in-out all;
+}
+
+.vector_map path:hover {
+  fill: rgb(41, 109, 141);
+  cursor: pointer;
+}
+
+.vector_map path:focus {
+  fill: rgb(41, 109, 141);
+  outline: none;
+}
+
+.map {
+  width: 70%;
+}
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-bottom: 2px solid red !important;
+  font-weight: bold !important;
+}
+
+.color_update {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.hover_country {
+  position: absolute;
+  width: 10%;
+  height: 20px;
+  background-color: rgba(145, 145, 145, 0.815);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  left: 20px;
+}
+
+.alrt_custom {
+  width: 40% !important;
+  text-align: center;
+}
+
+.global_data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.global_badges {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.global_badges span {
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 156px;
+  height: 25px;
+  line-height: 20px;
+  font-size: 0.8rem;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .map {
+    width: 96%;
+  }
+  .logo_img {
+    width: 150px;
+  }
+  .hover_country {
+    visibility: hidden;
+  }
+  .alrt_custom {
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 1140px) {
+  .map {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 330px) {
+  .global_data small{
+    margin-top: 60px;
+  }
+}
+
+
+@media (min-width: 331px) and (max-width:500px){
+  .global_data small{
+    margin-top: 22px;
+  }
 }
