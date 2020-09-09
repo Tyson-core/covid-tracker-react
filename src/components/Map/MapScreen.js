@@ -5,29 +5,36 @@ import { DataContext } from "../../context/DataProvider";
 
 export const MapScreen = () => {
   const [hovered, setHovered] = useState("None");
-  const [clicked, setClicked] = useState("None");
+  // const [clicked, setClicked] = useState("None");
   const [focused, setFocused] = useState("None");
   const { getDataByCountry } = useContext(DataContext);
 
+
   const textCountry = useRef()
+  const countryName = useRef()
+
 
   useEffect(() => {
-    if (focused === "None") {
-      return;
-    }
-    if (focused === "United States") {
-      getDataByCountry("US");
-    } else {
-      getDataByCountry(focused);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [clicked]);
+
+  }, []);
 
   const layerProps = {
     onMouseEnter: ({ target }) => setHovered(target.attributes.name.value),
     onMouseLeave: () => setHovered("None"),
     onFocus: ({ target }) => setFocused(target.attributes.name.value),
-    onClick: ({ target }) => setClicked(target.attributes.name.value),
+    onClick: () =>{
+      // setClicked(target.attributes.name.value)
+      if (focused === "None") {
+        return;
+      }
+      if (focused === "United States") {
+        getDataByCountry("US");
+      } else {
+        getDataByCountry(focused);
+      }
+      window.scrollTo(0, countryName.current.offsetTop) 
+
+    },
   };
 
   const styleMap = {
@@ -60,9 +67,9 @@ export const MapScreen = () => {
           />
         </div>
       </div>
-      <div className="mt-5 text-center mb-4">
+      <div className="mt-5 text-center mb-4" >
         {focused !== "None" && (
-          <h3>
+          <h3 ref={countryName}>
             Country: <small>{focused}</small>
           </h3>
         )}

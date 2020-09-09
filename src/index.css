@@ -120,6 +120,7 @@ code {
     width: 50%;
   }
 }
+
 @media (max-width: 506px) {
   .chart_container{
     width: 96%;
@@ -137,4 +138,18 @@ code {
   .global_data small{
     margin-top: 22px;
   }
+}
+
+
+/* Scrollbar */
+body::-webkit-scrollbar{
+  background: rgb(179, 179, 179);
+}
+
+body::-webkit-scrollbar{
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: rgb(75, 177, 224);
 }

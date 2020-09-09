@@ -9,7 +9,7 @@ import { GlobalData } from './GlobalData'
 export const MainScreen = () => {
     return (
         <DataProvider>
-            <div className="header_container">
+            <div className="header_container mb-2">
                 <img src={image} alt="covid_img"  className="mt-3 mb-3 logo_img"/>
             </div>
             <GlobalData/>
